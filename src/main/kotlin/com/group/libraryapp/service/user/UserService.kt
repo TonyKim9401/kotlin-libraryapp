@@ -28,9 +28,9 @@ class UserService (
     @Transactional(readOnly = true)
     fun getUsers(): List<UserResponse> {
         return userRepository.findAll()
-//                .map { user -> UserRepository(user) } // 평범한 문법
+                .map { user -> UserResponse.of(user) } // 평범한 문법
 //                .map { UserResponse(it) } // Kotlin 문법으로 같은 param 사용시 it으로 대체
-                .map(::UserResponse) // 각 객체를 바로 생성자에 넣어주기
+//                .map(::UserResponse) // 각 객체를 바로 생성자에 넣어주기
     }
 
     @Transactional
