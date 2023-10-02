@@ -8,9 +8,9 @@ import java.util.*
 interface BookRepository : JpaRepository<Book, Long> {
 
     fun findByName(bookName: String): Book?
-
+    /*
     @Query("select NEW com.group.libraryapp.dto.book.response.BookStatResponse(b.type, count(b.id)) " +
             "from Book b group by b.type")
     fun getStats(): List<BookStatResponse>
-
+    */
 }
