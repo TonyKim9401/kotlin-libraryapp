@@ -79,7 +79,7 @@ class CalculatorTest{
                 throw IllegalStateException("메세지가 다릅니다")
             }
 
-            // 테스트 성공
+           // 테스트 성공
             return
         } catch (e: Exception) {
             throw IllegalStateException()

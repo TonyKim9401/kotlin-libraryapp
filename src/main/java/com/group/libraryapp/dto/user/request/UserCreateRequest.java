@@ -1,5 +1,8 @@
 package com.group.libraryapp.dto.user.request;
 
+import org.jetbrains.annotations.NotNull;
+import org.jetbrains.annotations.Nullable;
+
 public class UserCreateRequest {
 
   private String name;
@@ -13,4 +16,8 @@ public class UserCreateRequest {
     return age;
   }
 
+  public UserCreateRequest(String name, Integer age) {
+    this.name = name;
+    this.age = age;
+  }
 }
