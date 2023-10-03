@@ -19,7 +19,7 @@ import org.springframework.transaction.annotation.Transactional
 class BookService(
         private val bookRepository: BookRepository,
         private val userRepository: UserRepository,
-        private val userLoanHistoryRepository: UserLoanHistoryRepository,
+//        private val userLoanHistoryRepository: UserLoanHistoryRepository,
         private val bookQuerydslRepository: BookQuerydslRepository,
         private val userLoanHistoryQuerydslRepository: UserLoanHistoryQuerydslRepository
 ) {
