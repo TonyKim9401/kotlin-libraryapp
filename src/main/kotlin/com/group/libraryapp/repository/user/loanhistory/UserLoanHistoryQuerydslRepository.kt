@@ -31,5 +31,4 @@ class UserLoanHistoryQuerydslRepository(
             )
             .fetchOne() ?: 0L
     }
-
 }
