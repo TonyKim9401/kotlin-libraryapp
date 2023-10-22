@@ -94,7 +94,7 @@ class BookServiceTest @Autowired constructor(
         // given
         bookRepository.save(Book.fixture("이상한 나라의 엘리스"))
         val savedUser = userRepository.save(User("A", null))
-        val loanHistory = userLoanHistoryRepository.save(UserLoanHistory.fixture(savedUser, "이상한 나라의 엘리스", UserLoanStatus.LOANED))
+        userLoanHistoryRepository.save(UserLoanHistory.fixture(savedUser, "이상한 나라의 엘리스", UserLoanStatus.LOANED))
         val request = BookReturnRequest("A", "이상한 나라의 엘리스")
 
         // when
