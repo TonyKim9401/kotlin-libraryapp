@@ -34,7 +34,7 @@ class BookServiceTest @Autowired constructor(
         userRepository.deleteAll()
     }
 
-    @DisplayName("책 등록이 정상 동작한다")
+    @DisplayName("책 등록이 정상 동작 한다")
     @Test
     fun saveBookTest() {
         // given
@@ -50,7 +50,7 @@ class BookServiceTest @Autowired constructor(
         assertThat(books[0].type).isEqualTo(BookType.COMPUTER)
     }
 
-    @DisplayName("책 대출이 정상 동작한다")
+    @DisplayName("책 대출이 정상 동작 한다")
     @Test
     fun loanBookTest() {
         // given
@@ -70,7 +70,7 @@ class BookServiceTest @Autowired constructor(
         assertThat(results[0].status).isEqualTo(UserLoanStatus.LOANED)
     }
 
-    @DisplayName("책이 이미 대출되어 있다면, 신규 대출이 실패한다")
+    @DisplayName("책이 이미 대출되어 있다면, 신규 대출이 실패 한다")
     @Test
     fun loanBookFailTest() {
         // given
@@ -88,7 +88,7 @@ class BookServiceTest @Autowired constructor(
         }
     }
 
-    @DisplayName("책 반납이 정상 동작한다")
+    @DisplayName("책 반납이 정상 동작 한다")
     @Test
     fun returnBookTest() {
         // given
@@ -106,7 +106,7 @@ class BookServiceTest @Autowired constructor(
         assertThat(results[0].status).isEqualTo(UserLoanStatus.RETURNED)
     }
 
-    @DisplayName("책 대여 권수를 정상 확인한다")
+    @DisplayName("책 대여 권수를 정상 확인 한다")
     @Test
     fun countLoanedBookTest() {
         // given
@@ -125,7 +125,7 @@ class BookServiceTest @Autowired constructor(
         assertThat(result).isEqualTo(1)
     }
 
-    @DisplayName("분야별 책 권수를 정상 확인한다")
+    @DisplayName("분야별 책 권수를 정상 확인 한다")
     @Test
     fun getBookStatisticsTest() {
         // given
