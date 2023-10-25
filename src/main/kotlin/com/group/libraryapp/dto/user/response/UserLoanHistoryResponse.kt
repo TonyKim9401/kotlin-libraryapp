@@ -2,7 +2,6 @@ package com.group.libraryapp.dto.user.response
 
 import com.group.libraryapp.domain.user.User
 import com.group.libraryapp.domain.user.loanhistory.UserLoanHistory
-import com.group.libraryapp.domain.user.loanhistory.UserLoanStatus
 
 data class UserLoanHistoryResponse(
     val name : String,
