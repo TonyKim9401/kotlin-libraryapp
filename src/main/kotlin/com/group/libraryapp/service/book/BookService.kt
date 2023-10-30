@@ -58,7 +58,6 @@ class BookService(
         return bookQuerydslRepository.getStats()
 
 //        return bookRepository.getStats()
-
         /*
         return bookRepository.findAll() // List<Book>
                 .groupBy { book -> book.type } // Map<BookType, List<Book>>
