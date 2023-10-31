@@ -7,7 +7,6 @@ data class UserResponse(
     val name: String,
     val age: Int?,
 ) {
-
     companion object {
         fun of(user: User): UserResponse {
             return UserResponse(
