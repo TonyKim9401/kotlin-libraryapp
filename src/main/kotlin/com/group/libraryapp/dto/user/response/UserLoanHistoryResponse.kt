@@ -10,8 +10,8 @@ data class UserLoanHistoryResponse(
     companion object {
         fun of(user: User): UserLoanHistoryResponse {
             return UserLoanHistoryResponse(
-                    name = user.name,
-                    books = user.userLoanHistories.map(BookHistoryResponse::of)
+                name = user.name,
+                books = user.userLoanHistories.map(BookHistoryResponse::of)
             )
         }
     }
