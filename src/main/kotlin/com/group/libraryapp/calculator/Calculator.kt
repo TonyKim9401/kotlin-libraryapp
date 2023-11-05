@@ -23,5 +23,4 @@ class Calculator (
         }
         this.number /= operand
     }
-
 }
