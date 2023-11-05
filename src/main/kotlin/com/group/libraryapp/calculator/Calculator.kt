@@ -3,7 +3,7 @@ package com.group.libraryapp.calculator
 import java.lang.IllegalArgumentException
 
 class Calculator (
-        var number: Int
+    var number: Int
 ){
     fun add(operand: Int){
         this.number += operand
