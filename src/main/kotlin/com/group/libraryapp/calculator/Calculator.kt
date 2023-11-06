@@ -11,7 +11,6 @@ class Calculator (
     fun minus(operand: Int) {
         this.number -= operand
     }
-
     fun multiply(operand: Int) {
         this.number *= operand
     }
