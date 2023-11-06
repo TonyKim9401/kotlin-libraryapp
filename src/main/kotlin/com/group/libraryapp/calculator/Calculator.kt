@@ -8,7 +8,6 @@ class Calculator (
     fun add(operand: Int){
         this.number += operand
     }
-
     fun minus(operand: Int) {
         this.number -= operand
     }
