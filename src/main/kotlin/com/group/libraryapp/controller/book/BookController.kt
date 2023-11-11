@@ -36,7 +36,6 @@ class BookController @Autowired constructor(
     fun countLoanedBook(): Int {
         return bookService.countLoanedBook()
     }
-
     @GetMapping("/book/stat")
     fun getBookStatistics(): List<BookStatResponse> {
         return bookService.getBookStatistics()
