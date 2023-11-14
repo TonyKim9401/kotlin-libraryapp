@@ -16,7 +16,6 @@ import org.springframework.web.bind.annotation.RestController
 class BookController @Autowired constructor(
         private val bookService: BookService
 ) {
-
     @PostMapping("/book")
     fun saveBook(@RequestBody request: BookRequest) {
         bookService.saveBook(request)
