@@ -20,7 +20,6 @@ class BookController @Autowired constructor(
     fun saveBook(@RequestBody request: BookRequest) {
         bookService.saveBook(request)
     }
-
     @PostMapping("/book/loan")
     fun loanBook(@RequestBody request: BookLoanRequest) {
         bookService.loanBook(request)
