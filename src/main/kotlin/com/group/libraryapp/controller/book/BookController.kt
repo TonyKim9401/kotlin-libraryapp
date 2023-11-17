@@ -24,7 +24,6 @@ class BookController @Autowired constructor(
     fun loanBook(@RequestBody request: BookLoanRequest) {
         bookService.loanBook(request)
     }
-
     @PutMapping("/book/return")
     fun returnBook(@RequestBody request: BookReturnRequest) {
         bookService.returnBook(request)
