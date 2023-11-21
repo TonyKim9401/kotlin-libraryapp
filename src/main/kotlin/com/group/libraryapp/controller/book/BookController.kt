@@ -28,7 +28,6 @@ class BookController @Autowired constructor(
     fun returnBook(@RequestBody request: BookReturnRequest) {
         bookService.returnBook(request)
     }
-
     @GetMapping("/book/loan")
     fun countLoanedBook(): Int {
         return bookService.countLoanedBook()
