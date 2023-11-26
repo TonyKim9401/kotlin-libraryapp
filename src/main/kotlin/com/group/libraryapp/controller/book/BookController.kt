@@ -36,5 +36,4 @@ class BookController @Autowired constructor(
     fun getBookStatistics(): List<BookStatResponse> {
         return bookService.getBookStatistics()
     }
-
 }
