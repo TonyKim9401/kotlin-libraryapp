@@ -10,7 +10,6 @@ import org.springframework.stereotype.Component
 class BookQuerydslRepository(
         private val queryFactory: JPAQueryFactory
 ) {
-
     fun getStats(): List<BookStatResponse> {
         return queryFactory
         .select(
