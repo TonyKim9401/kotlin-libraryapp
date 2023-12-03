@@ -22,7 +22,6 @@ class BookService(
     private val bookQuerydslRepository: BookQuerydslRepository,
     private val userLoanHistoryQuerydslRepository: UserLoanHistoryQuerydslRepository
 ) {
-
     @Transactional
     fun saveBook(request: BookRequest) {
         val book = Book(request.name, request.type)
