@@ -27,7 +27,6 @@ class BookService(
         val book = Book(request.name, request.type)
         bookRepository.save(book)
     }
-
     @Transactional
     fun loanBook(request: BookLoanRequest) {
         val book = bookRepository.findByName(request.bookName) ?: fail()
