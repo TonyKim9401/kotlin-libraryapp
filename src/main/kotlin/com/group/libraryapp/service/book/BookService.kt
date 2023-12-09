@@ -47,7 +47,6 @@ class BookService(
 //        return userLoanHistoryRepository.findAllByStatus(UserLoanStatus.LOANED).size
         return userLoanHistoryQuerydslRepository.count(UserLoanStatus.LOANED).toInt()
     }
-
     @Transactional(readOnly = true)
     fun getBookStatistics(): List<BookStatResponse> {
         return bookQuerydslRepository.getStats()
