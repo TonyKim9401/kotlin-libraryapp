@@ -38,7 +38,6 @@ class UserService (
         val user = userRepository.findByIdOrThrow(request.id)
         user.updateName(request.name)
     }
-
     @Transactional
     fun deleteUser(name: String) {
         val user = userRepository.findByName(name) ?: fail() // IllegalArgumentException::new
