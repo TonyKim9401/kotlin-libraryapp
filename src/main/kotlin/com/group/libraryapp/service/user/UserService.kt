@@ -43,7 +43,6 @@ class UserService (
         val user = userRepository.findByName(name) ?: fail() // IllegalArgumentException::new
         userRepository.delete(user)
     }
-
     @Transactional(readOnly = true)
     fun getUserLoanHistories(): List<UserLoanHistoryResponse> {
         return userRepository.findAllWithHistories()
