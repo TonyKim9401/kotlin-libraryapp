@@ -52,5 +52,4 @@ class UserService (
         return userRepository.findAllWithHistories()
                 .map(UserLoanHistoryResponse::of)
     }
-
 }
