@@ -25,7 +25,6 @@ class UserService (
         val newUser = User(request.name, request.age)
         userRepository.save(newUser)
     }
-
     @Transactional(readOnly = true)
     fun getUsers(): List<UserResponse> {
         return userRepository.findAll()
