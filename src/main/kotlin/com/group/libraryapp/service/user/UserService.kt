@@ -32,7 +32,6 @@ class UserService (
 //                .map { UserResponse(it) } // Kotlin 문법으로 같은 param 사용시 it으로 대체
 //                .map(::UserResponse) // 각 객체를 바로 생성자에 넣어주기
     }
-
     @Transactional
     fun updateUserName(request: UserUpdateRequest) {
 //        val user = userRepository.findByIdOrNull(request.id) ?: fail()// IllegalArgumentException::new
