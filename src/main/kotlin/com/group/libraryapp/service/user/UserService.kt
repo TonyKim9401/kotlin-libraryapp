@@ -16,7 +16,7 @@ import org.springframework.transaction.annotation.Transactional
 @Service
 class UserService (
     private val userRepository: UserRepository
-){
+) {
     @Transactional
     fun saveUser(request: UserCreateRequest) {
         /**
@@ -25,10 +25,11 @@ class UserService (
         val newUser = User(request.name, request.age)
         userRepository.save(newUser)
     }
+
     @Transactional(readOnly = true)
     fun getUsers(): List<UserResponse> {
         return userRepository.findAll()
-                .map { user -> UserResponse.of(user) } // 평범한 문법
+            .map { user -> UserResponse.of(user) } // 평범한 문법
 //                .map { UserResponse(it) } // Kotlin 문법으로 같은 param 사용시 it으로 대체
 //                .map(::UserResponse) // 각 객체를 바로 생성자에 넣어주기
     }
@@ -45,10 +46,10 @@ class UserService (
         val user = userRepository.findByName(name) ?: fail() // IllegalArgumentException::new
         userRepository.delete(user)
     }
+
     @Transactional(readOnly = true)
     fun getUserLoanHistories(): List<UserLoanHistoryResponse> {
         return userRepository.findAllWithHistories()
-                .map(UserLoanHistoryResponse::of)
+            .map(UserLoanHistoryResponse::of)
     }
-
 }
